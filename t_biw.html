@@ -47,8 +47,9 @@
 		<style>
 			body {
 				background: url(http://static.tumblr.com/b2vkqlh/Mhtnp4orb/header_bg.jpg) {BackgroundColor} no-repeat;
-				background-position:center 45px;
-				background-size: cover;
+				background-position:center 0;
+				background-size: contain;
+				position: relative;
 			}
 
 			.blog-title {
@@ -230,12 +231,13 @@ transition: all .5s ease-in-out;
 			/*#biwTitle .thomas{width: 142px;height: 19px;background-position: -45px -260px;left:30px;}*/
 			#biwTitle .title {width:662px;height:160px;position:relative;top:40px;background:url(http://static.tumblr.com/b2vkqlh/DfAnp4q4r/biw_title.png) no-repeat;margin:auto;background-size: cover;}
 
-			#biwTitle .trailer {width:617px;height:340px;margin:auto;background:url(http://static.tumblr.com/gvqza20/AKxnl6d96/creeper.jpg) no-repeat;background-size:contain;top:70px;position:relative;}
+			/*#biwTitle .trailer {width:617px;height:340px;margin:auto;background:url(http://static.tumblr.com/gvqza20/AKxnl6d96/creeper.jpg) no-repeat;background-size:contain;top:70px;position:relative;}*/
+			#biwTitle .trailer {width:617px;height:340px;margin:auto;top:70px;position:relative;}
 			/*#biwTitle .trailerCTA{background:url(http://static.tumblr.com/gvqza20/33Znl6cu8/watchtrailer_button.png) no-repeat; width:223px;height:40px;top:280px;margin:auto;position:relative;}*/
-			#biwTitle .trailerCTA{background:url(http://static.tumblr.com/b2vkqlh/uYJnp4w63/watchtrailer_btn.png) no-repeat; width:223px;height:40px;top:280px;margin:auto;position:relative;}
+			#biwTitle .trailerCTA{background:url(http://static.tumblr.com/b2vkqlh/uYJnp4w63/watchtrailer_btn.png) no-repeat; width:223px;height:160px;top:85px;margin:auto;position:relative;background-size: cover;}
 
 
-			#page {margin:550px auto auto;max-width:1050px;}
+			#page {margin:1050px auto auto;max-width:1050px;padding-bottom: 500px;}
 			.post-wrapper {border:3px solid black; border-radius:0;}
 			.photo .photo-wrapper {border-radius:0;border:none!important;}.photo-wrapper:not(.high-res)+.caption
 			.inline-meta {display:none;}
@@ -244,10 +246,18 @@ transition: all .5s ease-in-out;
 			.post-footer {background:black}
 			.share-control {display:none!important;}
 
-			#footer {position:relative;height:175px;width:100%;background:url(http://static.tumblr.com/gvqza20/HxOnl7mkm/footer_big2.png) no-repeat;background-position:center;width:427px;}
+			#last{
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+			}
 
+			#footer {position:relative;height:900px;background:url(http://static.tumblr.com/b2vkqlh/ENJnp523u/footer_bg.jpg) no-repeat;background-position:center;background-size: cover;}
+			#footer .stack{position:absolute;height:100px;width:100%;background:url(http://static.tumblr.com/b2vkqlh/It3np51ke/copyright_big.png) no-repeat;background-position:center;background-size: contain;margin: 0 auto;bottom: 300px;display: block;}
 			#footer .mpaa {position:absolute; width:20px;height:20px;top:75px;left:152px;width:31px;}
 			#footer .filmRatings {position:absolute; width:60px;height:20px;top:75px;left:242px;}
+
+
 
 			#pagination .bg {border:0}
 			#pagination a {color:#a43939!important;}
@@ -399,9 +409,9 @@ transition: all .5s ease-in-out;
 
 		<div id="biwTitle">
 			<div class="title"></div>
-			<div class="trailer">
+			<!-- <div class="trailer"> -->
 				<a href="https://www.youtube.com/watch?v=mmfp1l1ZfCw" class="fancybox-media sprite trailerCTA"></a>
-			</div>
+			<!-- </div> -->
 		</div>
 
 
@@ -796,8 +806,12 @@ transition: all .5s ease-in-out;
 					{/block:Pagination}
 				{/block:IndexPage}
 
-
-			<footer id="footer" class="content clearfix">
+				<!-- original footer placement -->
+		</section>
+		<section id="last">
+			<!-- <footer id="footer" class="content clearfix"> -->
+			<footer id="footer">
+				<div class="stack"></div>
 				<a href="http://www.mpaa.org" class="mpaa"></a>
 				<a href="http://filmratings.com" class="filmRatings"></a>
 			</footer>

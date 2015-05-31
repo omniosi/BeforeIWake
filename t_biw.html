@@ -256,7 +256,9 @@
 				/*margin:45em auto auto;*/
 				margin:75% auto auto;
 				/*max-width:1050px;*/
-				padding-bottom: 500px;
+				/*padding-bottom: 500px;*/
+				padding-bottom: 38%;
+				/*padding-bottom: 80%;*/
 			}
 			.post-wrapper {border:3px solid black; border-radius:0;}
 			.photo .photo-wrapper {border-radius:0;border:none!important;}.photo-wrapper:not(.high-res)+.caption
@@ -272,8 +274,31 @@
 				bottom: 0;
 			}
 
-			#footer {position:relative;height:900px;background:url(http://static.tumblr.com/b2vkqlh/YR5np6gvh/footer_bg-min.png) no-repeat;background-position:center;background-size: cover;}
-			#footer .stack{position:absolute;height:100px;width:100%;background:url(http://static.tumblr.com/b2vkqlh/It3np51ke/copyright_big.png) no-repeat;background-position:center;background-size: contain;margin: 0 auto;bottom: 300px;display: block;}
+			/*#footer {position:relative;height:900px;background:url(http://static.tumblr.com/b2vkqlh/YR5np6gvh/footer_bg-min.png) no-repeat;background-position:center;background-size: cover;}*/
+			#footer {
+				position:relative;
+				height:900px;
+				background:url(http://static.tumblr.com/b2vkqlh/YR5np6gvh/footer_bg-min.png) no-repeat;
+				/*background:url(http://static.tumblr.com/b2vkqlh/GfOnp6xyx/footer_bg-min3.png) no-repeat;*/
+				/*background-position:center;*/
+				background-position-x: center;
+				background-position-y: 100%;
+				/*background-size: cover;*/
+				background-size: 100% auto;
+			}
+			/*#footer .stack{position:absolute;height:100px;width:100%;background:url(http://static.tumblr.com/b2vkqlh/It3np51ke/copyright_big.png) no-repeat;background-position:center;background-size: contain;margin: 0 auto;bottom: 300px;display: block;}*/
+			#footer .stack{
+				position:absolute;
+				background:url(http://static.tumblr.com/b2vkqlh/It3np51ke/copyright_big.png) no-repeat;
+				background-position:center;
+				background-size: 100% auto;
+				width:70%;
+				/*bottom: 31%;*/
+				bottom: 30.5%;
+				display: block;
+				margin: 0 15%;
+				height: 100px;
+			}
 			#footer .mpaa {position:absolute; width:20px;height:20px;top:75px;left:152px;width:31px;}
 			#footer .filmRatings {position:absolute; width:60px;height:20px;top:75px;left:242px;}
 
@@ -285,7 +310,14 @@
 			#pagination a.previous:after {border-right-color:#a43939;}
 
 
-			@media screen and (max-width:700px){
+			@media screen and (max-width:990px){
+				#footer .stack{
+					/*bottom: 22%;*/
+					bottom: 15%;
+				}
+			}
+			/*@media screen and (max-width:700px){*/
+			@media screen and (max-width:718px){
 				body {
 					background: url(http://static.tumblr.com/b2vkqlh/Ws9np6i6c/header_sm.jpg) no-repeat;
 					/*background-position: center 40px;*/
@@ -328,22 +360,26 @@
 				#page {
 					/*margin-top:400px;*/
 					margin-top:105%;
+					padding-bottom: 80%;
 				}
 				#posts{width: 70%;}
 				#footer {
-					position:relative;
-					height:235px;
+					/*position:relative;*/
+					/*height:235px;*/
 					background:url(http://static.tumblr.com/b2vkqlh/kG2np6q76/footer_sm.png) no-repeat;
-					background-position:center;
+					/*background-position:center;*/
+					background-position-x: center;
+					background-position-y: 100%;
 					/*background-size: contain;*/
-					background-size: 120%;
+					background-size: 120% auto;
 				}
 				#footer .stack{
 					background: url(http://static.tumblr.com/b2vkqlh/KQonp6rdo/copyright_small.png) no-repeat;
-					background-size: contain;
-					background-position: center;
-					bottom: 70px;
-					height: 200px;
+					background-size: 100% auto;
+					background-position: center 100%;
+					/*bottom: 70px;*/
+					bottom: 18%;
+					height: 350px;
 				}
 			}
 
@@ -395,12 +431,15 @@
 
 				#page {
 					margin-top: 110%;
-					padding-bottom: 300px;
+					/*padding-bottom: 300px;*/
 				}
 
 				#biwNav .hashtag {left:5px;}
 				#biwNav .socialButtons {right:5px;}
 
+				#footer .stack{
+					bottom: 12%;
+				}
 			}
 
 
@@ -880,8 +919,9 @@
 			<!-- <footer id="footer" class="content clearfix"> -->
 			<footer id="footer">
 				<div class="stack"></div>
-				<a href="http://www.mpaa.org" class="mpaa"></a>
-				<a href="http://filmratings.com" class="filmRatings"></a>
+				<!-- <img class="stack" src="http://static.tumblr.com/b2vkqlh/It3np51ke/copyright_big.png"> -->
+				<!-- <a href="http://www.mpaa.org" class="mpaa"></a> -->
+				<!-- <a href="http://filmratings.com" class="filmRatings"></a> -->
 			</footer>
 		</section>
 		<script>

@@ -48,7 +48,8 @@
 			body {
 				background: url(http://static.tumblr.com/b2vkqlh/Mhtnp4orb/header_bg.jpg) {BackgroundColor} no-repeat;
 				background-position:center 0;
-				background-size: contain;
+				/*background-size: contain;*/
+				background-size: 100% auto;
 				position: relative;
 			}
 
@@ -229,15 +230,34 @@
 			/*#biwTitle .cast div {position:absolute}*/
 			/*#biwTitle .kate{width: 169px;height: 14px;background-position: -5px -5px;right:30px;}*/
 			/*#biwTitle .thomas{width: 142px;height: 19px;background-position: -45px -260px;left:30px;}*/
-			#biwTitle .title {width:662px;height:160px;position:relative;top:40px;background:url(http://static.tumblr.com/b2vkqlh/DfAnp4q4r/biw_title.png) no-repeat;margin:auto;background-size: cover;}
+			/*#biwTitle .title {width:662px;height:160px;position:relative;top:40px;background:url(http://static.tumblr.com/b2vkqlh/DfAnp4q4r/biw_title.png) no-repeat;margin:auto;background-size: contain;width: 50%;}*/
+			#biwTitle .title {
+				position:relative;
+				top:1.5em;
+				margin:0 25%;
+				width: 50%;
+			}
 
 			/*#biwTitle .trailer {width:617px;height:340px;margin:auto;background:url(http://static.tumblr.com/gvqza20/AKxnl6d96/creeper.jpg) no-repeat;background-size:contain;top:70px;position:relative;}*/
 			#biwTitle .trailer {width:617px;height:340px;margin:auto;top:70px;position:relative;}
 			/*#biwTitle .trailerCTA{background:url(http://static.tumblr.com/gvqza20/33Znl6cu8/watchtrailer_button.png) no-repeat; width:223px;height:40px;top:280px;margin:auto;position:relative;}*/
-			#biwTitle .trailerCTA{background:url(http://static.tumblr.com/b2vkqlh/uYJnp4w63/watchtrailer_btn.png) no-repeat; width:223px;height:160px;top:85px;margin:auto;position:relative;background-size: cover;}
+			/*#biwTitle .trailerCTA{background:url(http://static.tumblr.com/b2vkqlh/uYJnp4w63/watchtrailer_btn.png) no-repeat; width:223px;height:160px;top:85px;margin:auto;position:relative;background-size: cover;}*/
+			#biwTitle .trailerCTA{
+				width:20%;
+				margin:0 40%;
+				position:relative;
+				/*top:4em;*/
+				/*padding-top:4em;*/
+				padding-top:5%;
+			}
 
-
-			#page {margin:1050px auto auto;max-width:1050px;padding-bottom: 500px;}
+			/*#page {margin:1050px auto auto;max-width:1050px;padding-bottom: 500px;}*/
+			#page {
+				/*margin:45em auto auto;*/
+				margin:75% auto auto;
+				/*max-width:1050px;*/
+				padding-bottom: 500px;
+			}
 			.post-wrapper {border:3px solid black; border-radius:0;}
 			.photo .photo-wrapper {border-radius:0;border:none!important;}.photo-wrapper:not(.high-res)+.caption
 			.inline-meta {display:none;}
@@ -268,8 +288,9 @@
 			@media screen and (max-width:700px){
 				body {
 					background: url(http://static.tumblr.com/b2vkqlh/Ws9np6i6c/header_sm.jpg) no-repeat;
-					background-position: center 40px;
-					background-position: center 20px;
+					/*background-position: center 40px;*/
+					/*background-position: center 20px;*/
+					background-position: center 0;
 					background-size: contain;
 					background-size: 140%;
 				}
@@ -283,10 +304,12 @@
 				}
 
 				#biwTitle .title {
-					top:30px;
-					width:463px;
-					height:43px;
-					background-size:contain;
+					/*top:30px;*/
+					/*width:463px;*/
+					width:60%;
+					/*height:43px;*/
+					/*background-size:contain;*/
+					margin: 0 20%;
 				}
 
 				#biwTitle .trailer {
@@ -296,11 +319,15 @@
 				}
 
 				#biwTitle .trailerCTA {
-					top:190px;
+					/*top:190px;*/
+					width: 30%;
+					margin: 0 35%;
+					padding-top: 7%;
 				}
 
 				#page {
-					margin-top:400px;
+					/*margin-top:400px;*/
+					margin-top:105%;
 				}
 				#posts{width: 70%;}
 				#footer {
@@ -443,9 +470,13 @@
 		</div>
 
 		<div id="biwTitle">
-			<div class="title"></div>
+			<!-- <div class="title"></div> -->
+			<img class="title" src="http://static.tumblr.com/b2vkqlh/DfAnp4q4r/biw_title.png" alt="Before I Wake">
 			<!-- <div class="trailer"> -->
-				<a href="https://www.youtube.com/watch?v=mmfp1l1ZfCw" class="fancybox-media sprite trailerCTA"></a>
+				<!-- <a href="https://www.youtube.com/watch?v=mmfp1l1ZfCw" class="fancybox-media sprite trailerCTA"></a> -->
+				<a href="https://www.youtube.com/watch?v=mmfp1l1ZfCw" class="fancybox-media">
+					<img class="trailerCTA" src="http://static.tumblr.com/b2vkqlh/uYJnp4w63/watchtrailer_btn.png" alt="Watch Trailer">
+				</a>
 			<!-- </div> -->
 		</div>
 

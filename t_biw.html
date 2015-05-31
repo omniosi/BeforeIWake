@@ -72,17 +72,35 @@
 				color: {AccentColor};
 			}
 
+			#pagination{
+				position: relative;
+				z-index: 100;
+			}
+			#pagination a,
+			#pagination a.previous,
+			#pagination a.next{
+				padding: 0;
+				width: 60%;
+			}
 			#pagination a,
 			.exposed-nav-wrapper li a {
 				color: {AccentColor};
 			}
 
+			#pagination a.previous img,
+			#pagination a.next img {
+				/*width: 50%;*/
+				width: 30%;
+				/*width: 200px;*/
+			}
 			#pagination a.next:after {
-				border-left-color: {AccentColor};
+				/*border-left-color: {AccentColor};*/
+				border-left-color: rgba(0,0,0,0);
 			}
 
 			#pagination a.previous:after {
-				border-right-color: {AccentColor};
+				/*border-right-color: {AccentColor};*/
+				border-right-color: rgba(0,0,0,0);
 			}
 
 			.loader .loader-bar {
@@ -297,7 +315,7 @@
 				bottom: 30.5%;
 				display: block;
 				margin: 0 15%;
-				height: 100px;
+				height: 120px;
 			}
 			#footer .mpaa {position:absolute; width:20px;height:20px;top:75px;left:152px;width:31px;}
 			#footer .filmRatings {position:absolute; width:60px;height:20px;top:75px;left:242px;}
@@ -306,14 +324,25 @@
 
 			#pagination .bg {border:0}
 			#pagination a {color:#a43939!important;}
-			#pagination a.next:after {border-left-color:#a43939;}
-			#pagination a.previous:after {border-right-color:#a43939;}
+			/*#pagination a.next:after {border-left-color:#a43939;}*/
+			/*#pagination a.previous:after {border-right-color:#a43939;}*/
 
 
 			@media screen and (max-width:990px){
 				#footer .stack{
 					/*bottom: 22%;*/
 					bottom: 15%;
+				}
+				#pagination a.previous img,
+				#pagination a.next img {
+					/*width: 50%;*/
+					width: 40%;
+				}
+
+			}
+			@media screen and (min-width:1500px){
+				#footer .stack{
+					bottom: 34%;
 				}
 			}
 			/*@media screen and (max-width:700px){*/
@@ -431,7 +460,7 @@
 
 				#page {
 					margin-top: 110%;
-					/*padding-bottom: 300px;*/
+					padding-bottom: 110%;
 				}
 
 				#biwNav .hashtag {left:5px;}
@@ -902,10 +931,16 @@
 					{block:Pagination}
 					<div id="pagination">
 						{block:PreviousPage}
-						<a href="{PreviousPage}" class="previous" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}">{lang:Previous}<span class="bg"></span></a>
+							<a href="{PreviousPage}" class="previous" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}">
+								<img class="ibtn" src="http://static.tumblr.com/b2vkqlh/eEInp87t2/prev_btn.png" alt="Previous">
+								<!-- {lang:Previous}<span class="bg"></span> -->
+							</a>
 						{/block:PreviousPage}
 						{block:NextPage}
-						<a href="{NextPage}" class="next" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}">{lang:Next}<span class="bg"></span></a>
+							<a href="{NextPage}" class="next" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}">
+								<img class="ibtn" src="http://static.tumblr.com/b2vkqlh/1aSnp87j0/next_btn.png" alt="Next">
+								<!-- {lang:Next}<span class="bg"></span> -->
+							</a>
 						{/block:NextPage}
 						<div class="loader"><div class="loader-bar"></div><div class="loader-bar"></div><div class="loader-bar"></div></div>
 						<div style="clear:both"></div>

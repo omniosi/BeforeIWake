@@ -38,6 +38,8 @@
 
 		<link rel="stylesheet" href="http://static.tumblr.com/vr9xgox/k5rniy4bm/main-min.css">
 
+		<!-- icon font -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 		<!-- HTML5 Shiv -->
 		<!--[if lt IE 9]>
 			<script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
@@ -217,11 +219,31 @@
 			.nav-menu-wrapper {display:none;}
 			.sprite {background-image: url(http://static.tumblr.com/gvqza20/eyxnl4eh7/sprite_top.png); background-repeat:none;display:block;}
 			#biwNav {width:100%; height:45px; background:black;text-align:center;position:relative;z-index:9999;}
-			#biwNav .hashtag {position:absolute;left:20px;width:107px;height:12px;background-position:-85px -55px;top:17px;}
-			#biwNav .storyButton {width:65px;height:25px;background:url(http://static.tumblr.com/gvqza20/eA7nl4ipq/story_nav.png) no-repeat; background-position:center; background-position-y:8px; display:inline-block; margin-top:10px;}
-			#biwNav .storyButton:hover {background-image:url(http://static.tumblr.com/gvqza20/Ugqnl4ipz/story_over.png);background-position-y:2px;}
+			/*#biwNav .hashtag {position:absolute;left:20px;width:107px;height:12px;background-position:-85px -55px;top:17px;}*/
+			/*#biwNav .storyButton {width:65px;height:25px;background:url(http://static.tumblr.com/gvqza20/eA7nl4ipq/story_nav.png) no-repeat; background-position:center; background-position-y:8px; display:inline-block; margin-top:10px;}*/
+			/*#biwNav .storyButton:hover {background-image:url(http://static.tumblr.com/gvqza20/Ugqnl4ipz/story_over.png);background-position-y:2px;}*/
+			#biwNav .hashtag,
+			#biwNav .storyButton {
+				color: #fff;
+				text-decoration: none;
+				position: relative;
+				top: 11px;
+				letter-spacing: -0.05em;
+			}
+			#biwNav .hashtag {
+				left:15px;
+				position: absolute;
+				font-size: 15px;
+				top: 14px;
+			}
+			#biwNav .storyButton {
+				text-align: center;
+			}
+			#biwNav .storyButton:hover {
+				text-shadow: 0px 0px 10px rgba(255, 0, 0, 1), 0px 0px 5px rgba(255, 0, 0, 1);
+			}
 
-			#biwNav .socialButtons {position:absolute;right:20px;top:3px;}
+/*			#biwNav .socialButtons {position:absolute;right:20px;top:3px;}
 			#biwNav .socialButtons a {width:40px;height:40px; float:left;}
 			.socialButtons .instagramButton {background-position: -252px -55px;}
 			.socialButtons .twitterButton {background-position: -343px -105px;}
@@ -229,6 +251,15 @@
 			.socialButtons .instagramButton:hover {background-position: -202px -55px;}
 			.socialButtons .twitterButton:hover {background-position: -303px -155px;}
 			.socialButtons .facebookButton:hover {background-position: -234px -5px;}
+*/
+			#biwNav .socialButtons {position:absolute;right:20px;top:5px;}
+			#biwNav .socialButtons a {width:40px;height:40px; float:left;font-size: 24px;text-decoration: none;color: #fff;text-shadow: 0px 0px 10px rgba(168, 16, 16, 1), 0px 0px 5px rgba(168, 16, 16, 1);
+			}
+			#biwNav .socialButtons a:hover {
+				/*color: #a81010; // = rgb(168,16,16)*/
+				color: #ce2727;
+				text-shadow: none;
+			}
 
 			#storyPanelOuter {top:-480px;position:absolute;width:100%;z-index:9998;
 				-webkit-transition: top .5s ease-in-out;
@@ -308,7 +339,8 @@
 			#footer .stack{
 				position:absolute;
 				background:url(http://static.tumblr.com/b2vkqlh/qzqnp8fd5/copyright_big_t.png) no-repeat;
-				background-position:center;
+				/*background-position:center;*/
+				background-position: center 80%;
 				background-size: 100% auto;
 				width:70%;
 				/*bottom: 31%;*/
@@ -317,8 +349,25 @@
 				margin: 0 15%;
 				height: 150px;
 			}
-			#footer .mpaa {position:absolute; width:20px;height:20px;top:75px;left:152px;width:31px;}
-			#footer .filmRatings {position:absolute; width:60px;height:20px;top:75px;left:242px;}
+			/*#footer .mpaa {position:absolute; width:20px;height:20px;top:75px;left:152px;width:31px;}*/
+			/*#footer .filmRatings {position:absolute; width:60px;height:20px;top:75px;left:242px;}*/
+			#footer .mpaa,
+			#footer .filmRatings {
+				position: absolute;
+				bottom: 0;
+				text-decoration: none;
+				font-size: 70%;
+				color: #000;
+			}
+			#footer .mpaa {
+				/*left:595px;*/
+				left:63%;
+			}
+			#footer .filmRatings {
+				/*left:675px;*/
+				/*left:72%;*/
+				left:70%;
+			}
 
 
 
@@ -337,7 +386,8 @@
 			@media screen and (max-width:990px){
 				#footer .stack{
 					/*bottom: 22%;*/
-					bottom: 15%;
+					/*bottom: 15%;*/
+					bottom: 20%;
 				}
 				#pagination a.previous img,
 				#pagination a.next img {
@@ -529,12 +579,18 @@
 	<body data-urlencoded-name="{URLEncodedName}" class="{select:Layout}{block:IndexPage} index-page{/block:IndexPage}{block:PermalinkPage} permalink{/block:PermalinkPage}{block:SearchPage} search-page{block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}{block:HideHeaderImage} no-header-image{/block:HideHeaderImage}{block:NoStretchHeaderImage} contain-header-image{/block:NoStretchHeaderImage}">
 
 		<div id="biwNav">
-			<a class="sprite hashtag" href="https://twitter.com/hashtag/BeforeIWake"></a>
-			<a class="sprite storyButton" href="#"></a>
+			<!-- <a class="sprite hashtag" href="https://twitter.com/hashtag/BeforeIWake"></a> -->
+			<!-- <a class="sprite storyButton" href="#"></a> -->
+			<a class="hashtag trajan" href="https://twitter.com/hashtag/BeforeIWake">#BeforeIWake</a>
+			<a class="storyButton trajan" href="#">story</a>
+
 			<div class="socialButtons">
-				<a href="https://instagram.com/beforeiwakemovie/" class="sprite instagramButton"></a>
-				<a href="https://twitter.com/BeforeIWakeFilm" class="sprite twitterButton"></a>
-				<a href="https://www.facebook.com/BeforeIWakeMovie" class="sprite facebookButton"></a>
+				<!-- <a href="https://instagram.com/beforeiwakemovie/" class="sprite instagramButton"></a> -->
+				<!-- <a href="https://twitter.com/BeforeIWakeFilm" class="sprite twitterButton"></a> -->
+				<!-- <a href="https://www.facebook.com/BeforeIWakeMovie" class="sprite facebookButton"></a> -->
+				<a href="https://instagram.com/beforeiwakemovie/" class="instagramButton"><i class="icon-instagram"></i></a>
+				<a href="https://twitter.com/BeforeIWakeFilm" class="twitterButton"><i class="icon-twitter-sign"></i></a>
+				<a href="https://www.facebook.com/BeforeIWakeMovie" class="facebookButton"><i class="icon-facebook-sign"></i></a>
 			</div>
 		</div>
 		<div id="storyPanelOuter">
@@ -960,10 +1016,11 @@
 		<section id="last">
 			<!-- <footer id="footer" class="content clearfix"> -->
 			<footer id="footer">
-				<div class="stack"></div>
+				<div class="stack">
+					<a href="http://www.mpaa.org" class="mpaa">MPAA</a>
+					<a href="http://filmratings.com" class="filmRatings">Film Ratings</a>
+				</div>
 				<!-- <img class="stack" src="http://static.tumblr.com/b2vkqlh/qzqnp8fd5/copyright_big_t.png"> -->
-				<!-- <a href="http://www.mpaa.org" class="mpaa"></a> -->
-				<!-- <a href="http://filmratings.com" class="filmRatings"></a> -->
 			</footer>
 		</section>
 		<script>

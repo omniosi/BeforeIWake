@@ -315,7 +315,7 @@
 				bottom: 30.5%;
 				display: block;
 				margin: 0 15%;
-				height: 120px;
+				height: 150px;
 			}
 			#footer .mpaa {position:absolute; width:20px;height:20px;top:75px;left:152px;width:31px;}
 			#footer .filmRatings {position:absolute; width:60px;height:20px;top:75px;left:242px;}
@@ -328,6 +328,12 @@
 			/*#pagination a.previous:after {border-right-color:#a43939;}*/
 
 
+			@media screen and (min-width:1000px){
+				#pagination a.previous img,
+				#pagination a.next img {
+					width: 20%;
+				}
+			}
 			@media screen and (max-width:990px){
 				#footer .stack{
 					/*bottom: 22%;*/
@@ -342,7 +348,8 @@
 			}
 			@media screen and (min-width:1500px){
 				#footer .stack{
-					bottom: 34%;
+					/*bottom: 34%;*/
+					bottom: 40%;
 				}
 			}
 			/*@media screen and (max-width:700px){*/

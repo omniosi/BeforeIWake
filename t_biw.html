@@ -82,7 +82,7 @@
 			#pagination a.previous,
 			#pagination a.next{
 				padding: 0;
-				width: 60%;
+				width: 50%;
 			}
 			#pagination a,
 			.exposed-nav-wrapper li a {
@@ -94,6 +94,7 @@
 				/*width: 50%;*/
 				width: 30%;
 				/*width: 200px;*/
+				/*width: 150px;*/
 			}
 			#pagination a.next:after {
 				/*border-left-color: {AccentColor};*/
@@ -227,14 +228,14 @@
 				color: #fff;
 				text-decoration: none;
 				position: relative;
-				top: 11px;
+				top: 12px;
 				letter-spacing: -0.05em;
 			}
 			#biwNav .hashtag {
 				left:15px;
 				position: absolute;
 				font-size: 15px;
-				top: 14px;
+				top: 13px;
 			}
 			#biwNav .storyButton {
 				text-align: center;
@@ -252,7 +253,7 @@
 			.socialButtons .twitterButton:hover {background-position: -303px -155px;}
 			.socialButtons .facebookButton:hover {background-position: -234px -5px;}
 */
-			#biwNav .socialButtons {position:absolute;right:20px;top:5px;}
+			#biwNav .socialButtons {position:absolute;right:20px;top:6px;}
 			#biwNav .socialButtons a {width:40px;height:40px; float:left;font-size: 24px;text-decoration: none;color: #fff;text-shadow: 0px 0px 10px rgba(168, 16, 16, 1), 0px 0px 5px rgba(168, 16, 16, 1);
 			}
 			#biwNav .socialButtons a:hover {
@@ -338,38 +339,20 @@
 			/*#footer .stack{position:absolute;height:100px;width:100%;background:url(http://static.tumblr.com/b2vkqlh/qzqnp8fd5/copyright_big_t.png) no-repeat;background-position:center;background-size: contain;margin: 0 auto;bottom: 300px;display: block;}*/
 			#footer .stack{
 				position:absolute;
-				background:url(http://static.tumblr.com/b2vkqlh/qzqnp8fd5/copyright_big_t.png) no-repeat;
-				/*background-position:center;*/
-				background-position: center 80%;
+				background:url(http://static.tumblr.com/b2vkqlh/PiZnpahkv/copyright_big.png) no-repeat;
+				background-position: center 100%;
 				background-size: 100% auto;
-				width:70%;
-				/*bottom: 31%;*/
-				bottom: 30.5%;
+				/*width:70%;*/
+				width:700px;
+				margin: 0 -350px;
+				left: 50%;
+				bottom: 40%;
+				bottom: 25%;
 				display: block;
-				margin: 0 15%;
-				height: 150px;
+				height: 200px;
 			}
-			/*#footer .mpaa {position:absolute; width:20px;height:20px;top:75px;left:152px;width:31px;}*/
-			/*#footer .filmRatings {position:absolute; width:60px;height:20px;top:75px;left:242px;}*/
-			#footer .mpaa,
-			#footer .filmRatings {
-				position: absolute;
-				bottom: 0;
-				text-decoration: none;
-				font-size: 70%;
-				color: #000;
-			}
-			#footer .mpaa {
-				/*left:595px;*/
-				left:63%;
-			}
-			#footer .filmRatings {
-				/*left:675px;*/
-				/*left:72%;*/
-				left:70%;
-			}
-
-
+			#footer .mpaa {position:absolute;height:20px;bottom:70px;left:262px;width:45px;}
+			#footer .filmRatings {position:absolute;width:75px;height:20px;bottom:70px;left:355px;}
 
 			#pagination .bg {border:0}
 			#pagination a {color:#a43939!important;}
@@ -380,14 +363,12 @@
 			@media screen and (min-width:1000px){
 				#pagination a.previous img,
 				#pagination a.next img {
-					width: 20%;
+					/*width: 20%;*/
 				}
 			}
 			@media screen and (max-width:990px){
 				#footer .stack{
-					/*bottom: 22%;*/
-					/*bottom: 15%;*/
-					bottom: 20%;
+					bottom: 16%;
 				}
 				#pagination a.previous img,
 				#pagination a.next img {
@@ -398,8 +379,8 @@
 			}
 			@media screen and (min-width:1500px){
 				#footer .stack{
-					/*bottom: 34%;*/
-					bottom: 40%;
+					bottom: 31%;
+					/*bottom: 40%;*/
 				}
 			}
 			/*@media screen and (max-width:700px){*/
@@ -460,26 +441,41 @@
 					background-size: 120% auto;
 				}
 				#footer .stack{
-					background: url(http://static.tumblr.com/b2vkqlh/dEznp8fvu/copyright_small_t.png) no-repeat;
+					background: url(http://static.tumblr.com/b2vkqlh/abinpahox/copyright_small.png) no-repeat;
 					background-size: 100% auto;
 					background-position: center 100%;
-					/*bottom: 70px;*/
 					bottom: 18%;
 					height: 350px;
+					width: 450px;
+					margin: 0 -225px;
+				}
+				#footer .mpaa{
+					height: 30px;
+					left: 123px;
+					width: 55px;
+				}
+				#footer .filmRatings{
+					height: 30px;
+					left: 224px;
+					width: 96px;
 				}
 			}
 
 			@media screen and (max-width:630px){
 				#storyPanelOuter {top:-960px;}
 				#storyPanelOuter.showing {top:35px;}
+				#page{padding-bottom: 80%;}
+				#footer .stack{
+					bottom: 13%;
+				}
 			}
 
 			@media screen and (max-width:580px){
 				/*#posts{margin-top: 110px !important;}*/
 				#posts{margin-top: 0px !important;}
 			   /*#footer {height:207px; background-image:url(http://static.tumblr.com/gvqza20/Uyanl4ten/footer_small.png);width:300px;padding:0;}*/
-			   /*#footer .mpaa {left:76px;top:139px;}*/
-			   /*#footer .filmRatings {left:170px;top:139px;}*/
+			   #footer .mpaa {left:80px;bottom:45px;width:45px;}
+			   #footer .filmRatings {left:148px;bottom:45px;width: 68px;}
 			}
 
 			@media screen and (max-width:465px){
@@ -523,8 +519,28 @@
 				#biwNav .hashtag {left:5px;}
 				#biwNav .socialButtons {right:5px;}
 
-				#footer .stack{
+/*				#footer .stack{
 					bottom: 12%;
+				}
+*/				#footer .stack{
+					width: 300px;
+					margin: 0 -150px;
+					bottom: 10%;
+				}
+
+			}
+			@media screen and (max-width:420px){
+				#page{
+					padding-bottom: 105%;
+				}
+				#pagnation a.previous img,
+				#pagnation a.next img{
+					width: 70%;
+				}
+				#footer .stack{
+					width: 300px;
+					margin: 0 -150px;
+					bottom: 10%;
 				}
 			}
 
@@ -1017,10 +1033,9 @@
 			<!-- <footer id="footer" class="content clearfix"> -->
 			<footer id="footer">
 				<div class="stack">
-					<a href="http://www.mpaa.org" class="mpaa">MPAA</a>
-					<a href="http://filmratings.com" class="filmRatings">Film Ratings</a>
+					<a href="http://www.mpaa.org" class="mpaa"></a>
+					<a href="http://filmratings.com" class="filmRatings"></a>
 				</div>
-				<!-- <img class="stack" src="http://static.tumblr.com/b2vkqlh/qzqnp8fd5/copyright_big_t.png"> -->
 			</footer>
 		</section>
 		<script>

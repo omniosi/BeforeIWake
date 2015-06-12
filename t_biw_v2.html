@@ -312,7 +312,8 @@
 			#page {
 				margin: 70% auto auto;
 				/*padding-bottom: 500px;*/
-				padding-bottom: 38%;
+				/*padding-bottom: 38%;*/
+				padding-bottom: 30%;
 			}
 			.post-wrapper {border:3px solid black; border-radius:0;}
 			.photo .photo-wrapper {border-radius:0;border:none!important;}.photo-wrapper:not(.high-res)+.caption
@@ -343,20 +344,37 @@
 			/*#footer .stack{position:absolute;height:100px;width:100%;background:url(http://static.tumblr.com/b2vkqlh/qzqnp8fd5/copyright_big_t.png) no-repeat;background-position:center;background-size: contain;margin: 0 auto;bottom: 300px;display: block;}*/
 			#footer .stack{
 				position:absolute;
-				background:url(http://static.tumblr.com/b2vkqlh/PiZnpahkv/copyright_big.png) no-repeat;
+				background:url(http://static.tumblr.com/b2vkqlh/MCYnpthpv/copyright_big_02.png) no-repeat;
 				background-position: center 100%;
 				background-size: 100% auto;
-				/*width:70%;*/
-				width:700px;
-				margin: 0 -350px;
-				left: 50%;
-				bottom: 40%;
+				width:70%;
+				/*width:700px;*/
+				/*margin: 0 -350px;*/
+				margin: 0 15%;
+				/*left: 50%;*/
 				bottom: 25%;
 				display: block;
-				height: 200px;
+				/*height: 200px;*/
+				height: 100%;
 			}
-			#footer .mpaa {position:absolute;height:20px;bottom:70px;left:262px;width:45px;}
-			#footer .filmRatings {position:absolute;width:75px;height:20px;bottom:70px;left:355px;}
+			#footer .mpaa {
+				position:absolute;
+				height:20px;
+				/*bottom:70px;*/
+				bottom: 55px;
+				/*left:262px;*/
+				left: 77.5%;
+				width:45px;
+			}
+			#footer .filmRatings {
+				position:absolute;
+				width:75px;
+				height:20px;
+				/*bottom:70px;*/
+				bottom: 55px;
+				/*left:355px;*/
+				left: 82%;
+			}
 
 			#pagination .bg {border:0}
 			#pagination a {color:#a43939!important;}
@@ -388,10 +406,37 @@
 					width: 53%;
 				}
 			}
+			@media screen and (max-width:1024px){
+				#footer .stack{
+					bottom: 16.5%;
+				}
+				#footer .mpaa,
+				#footer .filmRatings{
+					bottom: 32px;
+				}
+				#footer .mpaa{
+					left: 78%;
+					width: 30px;
+				}
+				#footer .filmRatings{
+					left: 82.5%;
+					width: 45px;
+				}
+			}
 			@media screen and (min-width:1500px){
 				#footer .stack{
-					bottom: 31%;
-					/*bottom: 40%;*/
+					/*bottom: 31%;*/
+					bottom: 40%;
+				}
+				#footer .mpaa{
+					bottom: 110px;
+					left: 78%;
+					width: 60px;
+				}
+				#footer .filmRatings{
+					bottom: 110px;
+					left: 83%;
+					width: 100px;
 				}
 			}
 			/*@media screen and (max-width:700px){*/
@@ -449,30 +494,35 @@
 					background-size: 120% auto;
 				}
 				#footer .stack{
-					background: url(http://static.tumblr.com/b2vkqlh/abinpahox/copyright_small.png) no-repeat;
+					background: url(http://static.tumblr.com/b2vkqlh/gsonpthss/copyright_small_02.png) no-repeat;
 					background-size: 100% auto;
 					background-position: center 100%;
 					bottom: 18%;
-					height: 350px;
-					width: 450px;
-					margin: 0 -225px;
+					/*height: 350px;*/
+					/*width: 450px;*/
+					/*margin: 0 -225px;*/
+				}
+				#footer .mpaa,
+				#footer .filmRatings{
+					bottom: 0;
 				}
 				#footer .mpaa{
-					height: 30px;
-					left: 123px;
-					width: 55px;
+					/*height: 30px;*/
+					left: 31%;
+					width: 15%;
 				}
 				#footer .filmRatings{
-					height: 30px;
-					left: 224px;
-					width: 96px;
+					/*height: 30px;*/
+					left: 48%;
+					width: 20%;
 				}
 			}
 
 			@media screen and (max-width:630px){
 				#storyPanelOuter {top:-960px;}
 				#storyPanelOuter.showing {top:35px;}
-				#page{padding-bottom: 80%;}
+				/*#page{padding-bottom: 80%;}*/
+				#page{padding-bottom: 70%;}
 				#footer .stack{
 					bottom: 13%;
 				}
@@ -482,8 +532,11 @@
 				/*#posts{margin-top: 110px !important;}*/
 				#posts{margin-top: 0px !important;}
 			   /*#footer {height:207px; background-image:url(http://static.tumblr.com/gvqza20/Uyanl4ten/footer_small.png);width:300px;padding:0;}*/
-			   #footer .mpaa {left:80px;bottom:45px;width:45px;}
-			   #footer .filmRatings {left:148px;bottom:45px;width: 68px;}
+			   /*#footer .mpaa {left:80px;bottom:45px;width:45px;}*/
+			   /*#footer .filmRatings {left:148px;bottom:45px;width: 68px;}*/
+			   #footer .mpaa, #footer .filmRatings {height: 20px;}
+			   #footer .mpaa {left:31%;bottom:0%;width:15%;}
+			   #footer .filmRatings {left:48%;bottom:0%;width:20%;}
 			}
 
 			@media screen and (max-width:465px){
@@ -525,15 +578,16 @@
 					bottom: 12%;
 				}
 */				#footer .stack{
-					width: 300px;
-					margin: 0 -150px;
+					width:  80%;
+					margin: 0 10%;
 					bottom: 10%;
 				}
 
 			}
 			@media screen and (max-width:420px){
 				#page{
-					padding-bottom: 105%;
+					/*padding-bottom: 90%;*/
+					padding-bottom: 80%;
 				}
 				#pagnation a.previous img,
 				#pagnation a.next img{
@@ -543,9 +597,9 @@
 					width: 53%;
 				}
 				#footer .stack{
-					width: 300px;
-					margin: 0 -150px;
-					bottom: 10%;
+					/*width: 300px;*/
+					/*margin: 0 -150px;*/
+					/*bottom: 10%;*/
 				}
 			}
 
